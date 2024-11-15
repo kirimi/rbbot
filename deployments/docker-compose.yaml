@@ -1,0 +1,11 @@
+name: rbbot
+
+services:
+  user:
+    image: ghcr.io/kirimi/rb-bot:latest
+    container_name: rb_bot
+    restart: always
+    environment:
+      RB_BOT_TOKEN: ${RB_BOT_TOKEN}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
